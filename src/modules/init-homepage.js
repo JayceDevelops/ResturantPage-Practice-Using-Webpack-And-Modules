@@ -1,6 +1,6 @@
-import foodImage from "./assets/homepage.jpg";
+import foodImage from "../assets/homepage.jpg";
 
-export const homepage = () => {
+export const inithomepage = () => {
     const tabs = ['HOME', 'MENU', 'EVENTS', 'RESERVATIONS', 'CONTACT', 'BOOK A TABLE'];
 
     const header = document.querySelector('header');
@@ -18,13 +18,13 @@ export const homepage = () => {
 
         console.log(tab);
         if (tab === 'HOME'){
-            button.classList.add('tab', 'current');
+            button.classList.add('tab', 'current', 'home');
         }
         else if (tab === 'BOOK A TABLE'){
             button.classList.add('tab', 'book');
         }
         else {
-            button.className = 'tab';
+            button.classList.add('tab', tab);
         }
 
         navigation.appendChild(button);
